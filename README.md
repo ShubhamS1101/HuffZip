@@ -1,57 +1,76 @@
-# HuffmanCompressor
-Huffman Compression Web Application
+# Huffman Compressor
 
-This repository contains a web application implementation of Huffman coding compression, built using HTML, CSS, and JavaScript. The application allows you to compress and decompress text files using the Huffman coding algorithm.
+A comprehensive implementation of the Huffman coding algorithm for data compression. This project provides both a command-line tool written in C++ and a browser-based visual simulator using HTML, CSS, and JavaScript.
 
+## 🚀 Features
 
+- 🔠 **Huffman Encoding & Decoding**: Efficient text compression using variable-length codes.
+- 🧠 **Educational Visualization**: JavaScript frontend visually demonstrates the construction of the Huffman Tree.
+- 🌐 **Cross-platform**: Works on modern web browsers and any system with a C++ compiler.
+- 📁 **File Compression**: Compress and decompress files with the C++ tool.
+- 📊 **Tree Structure Visualization**: Dynamic display of the binary tree construction.
 
-Introduction
+## 🗂️ Project Structure
 
-Huffman coding is a lossless data compression algorithm that assigns variable-length codes to characters based on their frequencies in the input data. More frequently occurring characters are assigned shorter codes, which results in efficient compression without any loss of information. This web application provides an interface to compress and decompress text files using Huffman coding.
+```
+HuffmanCompressor-main/
+├── Codec.js             # JavaScript Huffman codec functions
+├── Huffman.cpp          # Core Huffman algorithm in C++
+├── Huffman.pdf          # Detailed documentation
+├── Minheap.js           # JavaScript helper for Huffman tree (min-heap)
+├── README.md            # Project readme
+├── index.html           # Web interface for simulation
+├── script.js            # Frontend logic controller
+├── styles.css           # Web styling
+├── images/              # Visual assets
+│   ├── bgHuff1.jpg
+│   └── bgHuff2.jpg
+```
 
+## 💻 Usage Instructions
 
-Features
+### 🌍 Running the Web Interface
 
-Text file compression using Huffman coding.
-Decompression of Huffman-compressed files.
-User-friendly interface for selecting and uploading files.
-Real-time display of compression and decompression progress.
-Downloading of compressed and decompressed files.
+1. Navigate to the project folder.
+2. Open `index.html` in any modern web browser (Chrome, Firefox, Edge).
+3. Use the interface to:
+   - Input a string
+   - Generate the Huffman tree
+   - View encoded results
 
+No server is required; it's a static client-side app.
 
-Usage
+### ⚙️ Running the C++ Backend
 
-To use the Huffman compression web application, follow these steps:
-Open the web application using the following link: https://sangdeepganvir.github.io/HuffmanCompressor/
-Click on the Choose File button to select a text file for compression.
-Once the file is selected, click on the Compress button.
-The application will display the compression progress and provide a download link for the compressed file.
-To decompress a file, click on the Choose File button in the decompression section.
-Select the compressed file, and then click on the Decompress button.
-The application will display the decompression progress and provide a download link for the decompressed file.
+1. Open a terminal and navigate to the directory.
+2. Compile the source code:
+   ```bash
+   g++ Huffman.cpp -o huffman
+   ```
+3. Run the compiled program:
+   ```bash
+   ./huffman
+   ```
+   Follow on-screen prompts to encode or decode files.
 
+## 📄 Dependencies
 
-Demo
+### JavaScript/Web
+- No dependencies; pure HTML/CSS/JS.
 
-A live demo of the Huffman compression web application is available at: https://sangdeepganvir.github.io/HuffmanCompressor/
+### C++
+- Requires a standard C++ compiler (e.g., GCC, Clang).
 
+## 📚 Documentation
 
-Installation
+- For algorithm explanations, flowcharts, and usage examples, refer to `Huffman.pdf`.
 
-If you want to set up the web application locally, follow the steps below:
-Clone the repository:
-git clone https://github.com/sangdeepganvir/HuffmanCompressor.git
-Navigate to the cloned directory.
-Open the index.html file in a web browser.
+## 🧪 Sample Input (Web Interface)
 
+Try encoding the text:
 
-License
+```
+this is an example for huffman encoding
+```
 
-This project is licensed under the MIT License. 
-
-
-Acknowledgments
-
-The implementation of the Huffman coding algorithm is based on the work of David Bau.
-The Vanta.js library is used for the background effects in the web application.
-The project structure and UI design are inspired by various examples and resources available online.
+Watch the tree build and codes generate dynamically.
