@@ -1,4 +1,4 @@
-# Huffman Compressor
+# HuffZip
 
 A comprehensive implementation of the Huffman coding algorithm for data compression. This project provides both a command-line tool written in C++ and a browser-based visual simulator using HTML, CSS, and JavaScript.
 
@@ -64,10 +64,6 @@ No server is required; it's a static client-side app.
 ## 📚 Documentation
 
 - For algorithm explanations, flowcharts, and usage examples, refer to `Huffman.pdf`.
-
-## 🧪 Sample Input (Web Interface)
-
-Try encoding the text:
 
 ```
 this is an example for huffman encoding
