@@ -1,4 +1,4 @@
-export{MinHeap}
+export { MinHeap }
 
 class MinHeap {
 	constructor() {

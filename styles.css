@@ -1,57 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
-  color: #0f3057;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
-  //  background-image: url('images/bgHuff2.JPG');
-  background-color: #161722;
+  background: linear-gradient(to bottom, #10024a, #0b002b);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-h2 {
-  margin-bottom: 1rem;
+.main-heading {
+  font-size: 2.2rem;
+  margin: 2rem 0 1rem;
+  color: #00f5ff;
+  font-weight: 600;
 }
 
-#heading {
-  font-size: 2.5rem;
-  margin-top: 7.5rem;
-  margin-bottom: 0.5rem;
-  color: cyan;
+.info-top {
+  margin-top: 20px;
+  color: #00e0ff;
+  font-size: 1rem;
 }
 
-#heading1 {
-  color: cyan;
-
-}
-#heading2 {
-  color: cyan;
+.info-top a {
+  color: #00ffff;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
+/* Upload container */
+.container-fluid {
+  padding: 2rem 1rem;
+}
+
+/* Card (upload box) */
 .card {
-  top: 3%;
-  width: 30rem;
-  height: 27rem;
-  text-align: center;
-  margin: 0 auto;
-  border: 4px double;
-  padding: 5rem 0;
-  background-color: #030524;
+  background-color: #fff;
+  color: black;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#uploadfile {
+.card h2 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+button,
+input[type="button"] {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  width: 16rem;
+  transition: background-color 0.3s ease;
 }
 
-#upload {
-  color: cyan;
+button:hover,
+input[type="button"]:hover {
+  background-color: #218838;
 }
 
-#encode, #decode {
+/* File input */
+input[type="file"] {
   margin-top: 1rem;
-  margin-right: 0.2rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #28a745;
+  width: 80%;
+  max-width: 250px;
 }
 
-#step2, #step3 {
+/* Hide unused steps */
+#step2,
+#step3 {
   display: none;
 }
 
@@ -61,111 +96,16 @@ h2 {
   margin: 2rem auto 0;
 }
 
-.text2 {
-  font-size: 1.5rem;
-}
+@media (max-width: 576px) {
+  .main-heading {
+    font-size: 1.5rem;
+  }
 
-#doneImg {
-  width: 10rem;
-  margin: auto;
-}
+  .card {
+    padding: 1.5rem;
+  }
 
-.container-fluid {
-  position: relative;
-  z-index: 2;
-  /* Increase the z-index to make it appear above the background */
-}
-
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  /* Decrease the z-index to make it appear below the main content */
-}
-
-
-
-///  Graph Css ////
-
-#step4 {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-}
-
-.background-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 40%;
-    height: 100%;
-    z-index: -1;
-}
-
-.background-container canvas {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-
-//// NEW////
-.boxes{
-    position: absolute;
-    display: block;
-    width: 40%;
-    height: 100%;
-    margin-left: 5%;
-}
-
-
-
-
-
-
-#binary_digit {
-  visibility: hidden;
-}
-#encoded_digit{
-  visibility: hidden;
-}
-#result{
-  visibility: hidden;
-}
-#text_digit{
-  visibility: hidden;
-}
-#paragraph_text {
-  position: absolute;
-  top: 10%;
-  right: 15%;
-  width: 30%;
-  height: 20%;
-  border: 2px solid black;
-  font-size: xx-large;
-
-  background-color: #030524;
-}
-
-#huffman {
-  position: absolute;
-  top: 28%;
-  right: 5%;
-  width: 50%;
-  height: 40%;
-  border: 1px solid black;
-  overflow: auto;
-  display: flex;
-}
-
-
-
-svg {
-  position: absolute;
-  width: auto;
-  height: auto;
+  input[type="file"] {
+    width: 100%;
+  }
 }

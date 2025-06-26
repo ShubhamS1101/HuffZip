@@ -1,5 +1,5 @@
-import{MinHeap} from "./Minheap.js";
-export{Codec}
+import { MinHeap } from "./Minheap.js";
+export { Codec }
 
 class Codec {
 	getCodes(node, curr_code) {
@@ -107,7 +107,7 @@ class Codec {
 			temp += data[k];
 			k++;
 		}
-		if (k == data.length){
+		if (k == data.length) {
 			alert("Invalid File! Please submit a valid De-Compressed file");
 			location.reload();
 			return;
