@@ -5,10 +5,8 @@ A comprehensive implementation of the Huffman coding algorithm for data compress
 ## Features
 
 - **Huffman Encoding & Decoding**: Efficient text compression using variable-length codes.
-- **Educational Visualization**: JavaScript frontend visually demonstrates the construction of the Huffman Tree.
 - **Cross-platform**: Works on modern web browsers and any system with a C++ compiler.
 - **File Compression**: Compress and decompress files with the C++ tool.
-- **Tree Structure Visualization**: Dynamic display of the binary tree construction.
 
 ## Project Structure
 
